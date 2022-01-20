@@ -1,4 +1,6 @@
-$SN = "000-B6-0000"
+# $SN = "328-B6-7676" # Good Serial Number
+# $SN = "328-XQ-7676" # Good Serial Number
+$SN = "000-B6-0000" # Bad Serial Number
 
 If ($SN[3] -ne "-") { return Write-Host "SN: Bad.... Try Again" }
 If ($SN[6] -ne "-") { return Write-Host "SN: Bad.... Try Again" }
