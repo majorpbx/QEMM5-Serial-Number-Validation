@@ -24,11 +24,7 @@ $BL = ($($BL) - 1) - $($AH)
 $AH = $($BL) + 30
 
 If ($($AH) -eq $("{0:X}" -f [int][char]$SN[7])) {
-
 Write-Host "SN: $($SN) is Good!"
-
 } Else {
-
 Write-Host "SN: $($SN) is Bad.... Try again"
-
 }
