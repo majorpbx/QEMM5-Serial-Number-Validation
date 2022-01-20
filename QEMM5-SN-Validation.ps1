@@ -2,13 +2,14 @@
 # $SN = "328-XQ-7676" # Good Serial Number
 $SN = "000-B6-0000" # Bad Serial Number
 
-If ($SN[3] -ne "-") { return Write-Host "SN: Bad.... Try Again" }
-If ($SN[6] -ne "-") { return Write-Host "SN: Bad.... Try Again" }
+If ($SN[3] -ne "-") { return Write-Host "SN: $($SN) Bad.... Try Again" }
+If ($SN[6] -ne "-") { return Write-Host "SN: $($SN) Bad.... Try Again" }
 
-If ("$($SN[4])$($SN[5])" -eq "XQ") { continue }
-
-If ($SN[4] -ne "B") { return Write-Host "SN: Bad.... Try Again" }
-If ($SN[4] -ne "6") { return Write-Host "SN: Bad.... Try Again" }
+Switch ("$($SN[4])$($SN[5])") {
+   "B6" { break }
+   "XQ" { break }
+default { return Write-Host "SN: $($SN) is Bad.... Try Again" }
+}
 
 $BL = 10
 $Data = $NULL
@@ -24,10 +25,10 @@ $AH = $($BL) + 30
 
 If ($($AH) -eq $("{0:X}" -f [int][char]$SN[7])) {
 
-Write-Host "SN: $($S) is Good!"
+Write-Host "SN: $($SN) is Good!"
 
 } Else {
 
-Write-Host "SN: $($S) is Bad.... Try again"
+Write-Host "SN: $($SN) is Bad.... Try again"
 
 }
