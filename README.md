@@ -3,12 +3,9 @@ Validate a Quarterdeck Expanded Memory Manager 386 Version 5 Serial Number.
 
 Adding support for these versions:
 
-QRAM 1
-QRAM 2
+QRAM 1/2
 
-QEMM 6
-QEMM 7
-QEMM 8
+QEMM 6/7/8
 
 MagnaRAM 2
 
