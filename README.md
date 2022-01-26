@@ -14,7 +14,6 @@ MagnaRAM 2
 
 
 
-
 Software can be found at websites such as below.
 
 https://winworldpc.com/product/qemm/5x
