@@ -49,7 +49,7 @@ default { return Write-Host "SN: $($SerialNumber) is Bad.... Try Again" }
 $Data = $NULL
 
 For ($c=0;$c -le 10;$c++) { 
-$Data
+
 If (($c -le 2) -or ($c -ge 8)) { $Data += $([Convert]::ToInt16($SerialNumber[$c],10)) }
 }
 
